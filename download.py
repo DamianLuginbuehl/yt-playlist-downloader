@@ -9,7 +9,7 @@ from mutagen.id3 import ID3, TIT2, TPE1, TRCK
 
 # === CONFIG ===
 PLAYLIST_URL = "<YouTube or YouTube Music playlist URL>"
-SONGS_PER_CD = 100  # safety limit for 700 MB CDs with 192 kbps CBR
+SONGS_PER_CD = 100  # safety limit for 900 MB CDs with 192 kbps CBR
 CD_FOLDER_PREFIX = "CD_"
 OUTPUT_FOLDER = Path("download")
 AUDIO_QUALITY = "192k"  # target bitrate
