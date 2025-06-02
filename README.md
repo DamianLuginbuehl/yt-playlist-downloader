@@ -1,13 +1,18 @@
 # ▶️ YouTube Playlist Downloader
 This is a automatic downloaded for YouTube Playlists using python3. It downloads songs in the quality you can specify yourself.
-The only requirement is that your desired playlist is either set to **unlisted** or **public**.\
-It also applies the correct metadata (artist/s and track title).\
+The only requirement is that your desired playlist is either set to **unlisted** or **public**.  
+It also applies the correct metadata (artist/s and track title).  
+  
 ### ✅ Programmed with CD burning in mind
-This tool is optimised for CD burning as it splits up your songs into different CDs. You can set the song limit per CD and define how many songs you want to download, starting from the beginning. The factory settings are **100 songs/CD** with each song being **192 kbps CBR**. This is optimized for a **900MB CD** if each song is 5 Minutes long.\
-**⚠️ Adapt this value depending on your liking and the capacity of the CDs you are using**\
+This tool is optimised for CD burning as it splits up your songs into different CDs. You can set the song limit per CD and define how many songs you want to download, starting from the beginning. The factory settings are **100 songs/CD** with each song being **192 kbps CBR**. This is optimized for a **900MB CD** if each song is 5 Minutes long.  
+  
+**⚠️ Adapt this value depending on your liking and the capacity of the CDs you are using**  
+  
 ### ✅ Works with YouTube Music Radios\*
-You can even download YouTube Music Playlists and Radios\* with this tool. The only requirement is that your desired playlist is either set to **unlisted** or **public**.\
-_\* ⚠️ since Radios can be dynamic, it is recommended that you make a playlist out of them by saving the radio to a playlist. As per 02.06.25, this funcitonality is only available in the YouTube Music app for Android/iOS._\
+You can even download YouTube Music Playlists and Radios\* with this tool. The only requirement is that your desired playlist is either set to **unlisted** or **public**.  
+  
+_\* ⚠️ since Radios can be dynamic, it is recommended that you make a playlist out of them by saving the radio to a playlist. As per 02.06.25, this funcitonality is only available in the YouTube Music app for Android/iOS._  
+  
 ## ℹ️ How to use the downloader?
 Edit the variable **PLAYLIST_URL** to the URL of your desired playlist in the **CONFIG** section. Also change the values **SONGS_PER_CD**, **AUDIO_QUALITY** and **MAX_SONGS** depening on the capacity of your CDs, the amount of songs you want per CD and the amount of CDs you plan on burning.
 ```
@@ -19,19 +24,19 @@ OUTPUT_FOLDER = Path("download")
 AUDIO_QUALITY = "192k"  # target bitrate
 MAX_SONGS = 300  # hard limit: only process the first 300 songs
 ```
-\
+  
 After that, run the script with the following command:
 ```
 python download.py
 ```
-\
+  
 ⚠️ You have to install additional packages as they are not included. Use the following command to install them:
 ```
 pip install -r requirements.txt
 ```
 
-\
-Please wait, til the script is finished. All metadata and sorting operations are done **AFTER** all the songs are downloaded.\
+  
+Please wait, til the script is finished. All metadata and sorting operations are done **AFTER** all the songs are downloaded.  
 The final Structure will look like this (example with 100 songs per CD):
 ```
 download
