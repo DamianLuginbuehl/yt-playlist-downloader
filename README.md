@@ -29,7 +29,7 @@ After that, run the script with the following command:
 python download.py
 ```
 \
-You havt to additional packages as they are not included. Use the following command to install them:
+You have to install additional packages as they are not included. Use the following command to install them:
 ```
 pip install -r requirements.txt
 ```
