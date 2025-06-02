@@ -9,11 +9,11 @@ from mutagen.id3 import ID3, TIT2, TPE1, TRCK
 
 # === CONFIG ===
 PLAYLIST_URL = "<YouTube or YouTube Music playlist URL>"
-SONGS_PER_CD = 100  # Safety limit for 700 MB CDs with 192 kbps CBR
+SONGS_PER_CD = 100  # safety limit for 700 MB CDs with 192 kbps CBR
 CD_FOLDER_PREFIX = "CD_"
 OUTPUT_FOLDER = Path("download")
-AUDIO_QUALITY = "192k"  # Zielbitrate
-MAX_SONGS = 300  # Hard limit: only process the first 300 songs
+AUDIO_QUALITY = "192k"  # target bitrate
+MAX_SONGS = 300  # hard limit: only process the first 300 songs
 
 # === SETUP ===
 OUTPUT_FOLDER.mkdir(exist_ok=True)
@@ -31,7 +31,8 @@ subprocess.run(
         "0",
         "--yes-playlist",
         "--playlist-items",
-        f"1-{MAX_SONGS}",  # only download the first MAX_SONGS songs
+        f"1-{MAX_SONGS}",
+        # "--write-info-json",
         "--output",
         "%(playlist_index)03d - %(artist)s - %(title)s.%(ext)s",
         PLAYLIST_URL,
